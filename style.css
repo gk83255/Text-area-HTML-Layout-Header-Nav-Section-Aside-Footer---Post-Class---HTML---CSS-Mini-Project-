@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #DFF6FF;
+    display: grid;
+    grid-template-areas:
+        'header  header header header '
+        'menu menu  main main '
+        'footer footer  footer footer ';
+    /* gap: 10px; */
+}
+
+/* Header */
+header {
+    background-color: #06283D;
+    padding: 20px 20px;
+    grid-area: header;
+}
+
+header p {
+    color: #fff;
+    /* font-size: 1.5rem; */
+    /* font-weight: 600; */
+    text-align: center;
+}
+
+/* Header End */
+
+
+/* Left Menu */
+.menu {
+    grid-area: menu;
+    background-color: #47B5FF;
+    padding: 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+/* left Menu End */
+.main {
+    /* margin-top: 50px; */
+    grid-area: main;
+    /* background-color: #1363DF; */
+    height: 86vh;
+}
+
+.main .container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.main .container .row {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 3rem;
+    padding: 0 10%;
+}
+
+.main h4 {
+    margin: 10px 0;
+    color: rgb(66, 24, 105);
+    border: 1px;
+}
+
+.main h1 {
+    margin: 10px 0;
+    font-size: 45px;
+    color: rgb(94, 18, 18);
+}
+
+.main p {
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.main h2 {
+    color: silver;
+}
+
+.main h2 span {
+    color: goldenrod;
+}
+
+.main .userImg {
+    text-align: center;
+    /* width: 20%; */
+}
+
+.main .userImg img {
+    width: 100%;
+}
+
+.info {
+    font-size: 15px;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.info h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    color: #06283D;
+}
+
+.info i {
+    margin-right: 10px;
+}
+
+.info a {
+    color: #06283D;
+    text-decoration: none;
+}
+
+.info p {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.info div {
+    margin-top: 10px;
+}
+
+.qualification {
+    margin-top: 50px;
+}
+
+.qualification h2 {
+    color: #06283D;
+}
+
+.qualification p {
+    margin-top: 10px;
+    line-height: 1.3rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills h2 {
+    color: #06283D;
+}
+
+.skills label {
+    text-align: left;
+    width: 100px;
+    font-weight: 500;
+}
+
+.skills .progress {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.skills .mySkills {
+    margin-top: 20px;
+}
+
+/* Main End */
+
+/* Footer */
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #06283D;
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: 0; */
+    color: #fff;
+    padding: 15px;
+}
+
+/* Footer End */
+
+
+/* Responsive */
+@media (max-width:1079px) {
+    .info h2 {
+        font-size: 5vw;
+    }
+
+    .main {
+        height: 100%;
+    }
+
+    .main .userImg img {
+        width: 85%;
+    }
+}
+
+@media (max-width:850px) {
+
+    body {
+        grid-template-areas:
+            'header  header  '
+            ' main main '
+            'menu menu '
+            'footer footer ';
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:750px) {
+    .main .container .row {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .main .userImg img {
+        width: 50%;
+    }
+
+    .main p {
+        width: 100%;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .info h2 {
+        font-size: 10vw;
+    }
+
+    .info p {
+        text-align: center;
+    }
+
+    .qualification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .qualification p {
+        text-align: center;
+    }
+}
+
+/* Responsive End */
